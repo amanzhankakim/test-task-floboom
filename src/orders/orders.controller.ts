@@ -4,7 +4,6 @@ import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
 import { ErrorFilter } from 'src/filter';
 import { TransformInterceptor } from 'src/interceptors/transform.interceptor';
-import { AuthInterceptor } from 'src/interceptors/auth.interceptor';
 import { request } from 'http';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 

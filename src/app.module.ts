@@ -6,7 +6,6 @@ import { Client } from './entities/client.entity';
 import { Order } from './entities/order.entity';
 import { Product } from './entities/product.entity';
 import { OrdersModule } from './orders/orders.module';
-import { TokensModule } from './tokens/tokens.module';
 import { AuthModule } from './auth/auth.module';
 import { GoodsModule } from './goods/goods.module';
 import { OrderItem } from './entities/orderItem.entity';
@@ -25,7 +24,6 @@ import { OrderItem } from './entities/orderItem.entity';
       synchronize: true,
     }),
     OrdersModule,
-    TokensModule,
     AuthModule,
     GoodsModule
   ],
