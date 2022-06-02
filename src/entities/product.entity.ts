@@ -1,5 +1,6 @@
-import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Order } from "./order.entity";
+import { OrderItem } from "./orderItem.entity";
 
 @Entity("products")
 export class Product {
@@ -12,4 +13,6 @@ export class Product {
     @Column({ type: "integer" })
     price: number;
 
+    @OneToMany(() => OrderItem, orderItem => orderItem.product)
+    orderItems: OrderItem[]
 }
